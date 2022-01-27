@@ -20,3 +20,6 @@ Ability to add Notes as well as cancel, reset and submit button so as to do some
 
 UseCase 7-
 Using the UX design set the button style appropriately.
+
+UseCase 8-
+Ability to Set Event Listener on Salary Range to display appropriate value.

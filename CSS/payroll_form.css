@@ -159,30 +159,36 @@ select {
     text-align: center;
 }
 
-@media only screen and (max-width: 960px) {
-    .cancelButton {
+@media only screen and (max-width: 960px){
+    .cancelButton{
         margin-left: 0px;
     }
     .form{
         width: 85%;
         padding: 44px 20px;
     }
+    .profile-label{
+        margin-right: 0px;
+    }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px){
     .form{
         margin-top: 10px;
     }
-    .row {
+    .row{
         flex-direction: column;
     }
-    .uploadButton {
+    .uploadButton{
         justify-content: flex-start;
     }
     .profile-radio-button{
         flex-flow: wrap;
     }
-    .submit-reset {
+    .profile-radio-content{
+        flex-flow: wrap;
+    }
+    .submit-reset{
         width: 100%;
         display: flex;
         flex-grow: 1;
@@ -190,11 +196,39 @@ select {
         justify-content: space-between;
         margin-bottom: 20px;
     }
-    .submitButton {
+    .submitButton{
         margin: 0;
     }
-    .buttonParent {
+    .buttonParent{
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+}
+
+a.button:hover{
+    background-color: gray;
+    color: white;
+}
+.submitButton:hover{
+    background-color: #82a70c;
+    color: white;
+}
+.resetButton:hover{
+    background: gray;
+    color: white;
+}
+@media only screen and (max-width: 320px){
+    .label{
+        min-width: 50px;
+    }
+}
+.profile-label{
+    margin-right: 20px;
+}
+
+.text-error{
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
