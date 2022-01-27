@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+    <!--UseCase1-->
     <header class="header-content header">
         <div class="logo-content">
             <img src="../Assets/images/logo.png" alt="logo">
@@ -20,6 +22,8 @@
             </div>
         </div>
     </header>
+
+    <!--UseCase2-->
     <div class="form-content">
         <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">
@@ -29,6 +33,8 @@
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" name="name" id="name" placeholder="Your name.." required>
             </div>
+
+            <!--UseCase3-->
             <div class="row-content">
                 <label class="label text" for="profile">Profile Image</label>
                 <div class="profile-radio-content">
@@ -54,6 +60,39 @@
                     </label>
                 </div>
             </div>
+
+            <!--UseCase4-->
+            <div class="row-content">
+                <label class="label text" for="gender">Gender</label>
+                <div>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label class="text" for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label class="text" for="female">Female</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="department">Department</label>
+                <div>
+                    <input class="checkbox" type="checkbox" name="hr" id="hr" value="HR">
+                    <label class="text" for="hr">HR</label>
+                    <input class="checkbox" type="checkbox" name="sales" id="sales" value="Sales">
+                    <label class="text" for="sales">Sales</label>
+                    <input class="checkbox" type="checkbox" name="finance" id="finance" value="Finance">
+                    <label class="text" for="finance">Finance</label>
+                    <input class="checkbox" type="checkbox" name="Engineer" id="Engineer" value="Engineer">
+                    <label class="text" for="Engineer">Engineer</label>
+                    <input class="checkbox" type="checkbox" name="others" id="others" value="Others">
+                    <label class="text" for="others">Others</label>
+                </div>
+            </div>
+            <div class="row-content">
+                <label class="label text" for="salary">Choose your salary: </label>
+                <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" step="100"
+                    value="400000">
+                <output class="salary-output text" for="salary">400000</output>
+            </div>
+
         </form>
     </div>
 </body>

@@ -8,3 +8,6 @@ Ability to create a Form Header and the Input Text Element for Name.
 
 UseCase 3-
 Ability to specify the Profile Pic in the Form.
+
+UseCase 4-
+Ability to specify the gender as radio button, department as checkbox and Salary as range indicator.
