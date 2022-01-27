@@ -15,3 +15,8 @@ Ability to specify the gender as radio button, department as checkbox and Salary
 UseCase 5-
 Ability to specify the start date with Day, Month and Year as Select Input Item.
 
+UseCase 6-
+Ability to add Notes as well as cancel, reset and submit button so as to do some action on form entry.
+
+UseCase 7-
+Using the UX design set the button style appropriately.
