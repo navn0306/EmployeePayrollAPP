@@ -26,3 +26,6 @@ Ability to Set Event Listener on Salary Range to display appropriate value.
 
 Usecase 9-
 On Form Submit populate the Employee Payroll Data Object.
+
+UseCase 10-
+Perform Validation Employee Payroll Data setter methods.
