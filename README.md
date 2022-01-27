@@ -23,3 +23,6 @@ Using the UX design set the button style appropriately.
 
 UseCase 8-
 Ability to Set Event Listener on Salary Range to display appropriate value.
+
+Usecase 9-
+On Form Submit populate the Employee Payroll Data Object.
