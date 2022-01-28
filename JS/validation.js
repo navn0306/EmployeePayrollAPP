@@ -1,27 +1,38 @@
 window.addEventListener('DOMContentLoaded', () => {
-    validateName();
-    validateSalary()
-});
 
-function validateName() {
+    //Name validation
     const name = document.querySelector('#name');
-    const textError = document.querySelector('.text-error');
+    const textError = document.querySelector('.text-error')
     name.addEventListener('input', function () {
-        const nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$')
-        if (nameRegex.test(name.value)) {
+        if (name.value.lenght == 0) {
             textError.textContent = "";
+            return;
         }
-        else {
-            textError.textContent = "Name is invalid";
+        try {
+            (new EmployeePayrollData()).name = name.value;
+            textError.textContent = "";
+        } catch (e) {
+            textError.textContent = e;
         }
     });
-}
 
-function validateSalary() {
+    //salary validation
     const salary = document.querySelector("#salary");
     const output = document.querySelector('.salary-output');
     output.textContent = salary.value;
     salary.addEventListener('input', function () {
         output.textContent = salary.value;
     });
-}
+
+    //Start Date Validation
+    const date = document.querySelector('#start Date');
+    const output1 = document.querySelector('text-error');
+    date.addEventListener('input', function () {
+        try {
+            (new EmployeePayrollData()).date = date.value;
+            textError.textContent = "";
+        } catch (e) {
+            textError.textContent = e;
+        }
+    });
+});

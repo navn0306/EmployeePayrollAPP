@@ -26,15 +26,15 @@
     </header>
 
     <!--UseCase2-->
-    <div class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+    <div id= "formID" class="form-content">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">
                 Employee Payroll Form
             </div>
             <div class="row-content">
                 <label class="label text" for="name">Name</label>
                 <input class="input" type="text" name="name" id="name" placeholder="Your name.." required>
-                <error-output class="text-error" for="name"></error-output>
+                <error-output class="text-error" for="text"></error-output>
             </div>
 
             <!--UseCase3-->
@@ -98,6 +98,7 @@
             <!--UseCase5-->
             <div class="row-content">
                 <label class="label text" for="start Date">Start Date</label>
+                <error-output class="text-error" for="text"></error-output>
                 <div>
                     <select name="Day" id="day">
                         <option value="1">1</option>
