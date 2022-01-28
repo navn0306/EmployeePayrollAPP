@@ -41,3 +41,6 @@ Ability to create Employee Payroll Object On Save.
 
 UseCase 14-
 Ability to save the Employee Payroll Object to Local Storage.
+
+UseCase 15-
+Ability to reset the form on clicking reset.
