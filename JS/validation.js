@@ -1,10 +1,10 @@
-window.addEventListener('DOMContentLoaded', (event) => {
+window.addEventListener('DOMContentLoaded', () => {
     validateName();
-    validateSalary();
+    validateSalary()
 });
 
 function validateName() {
-    const name = document.querySelector('#name1');
+    const name = document.querySelector('#name');
     const textError = document.querySelector('.text-error');
     name.addEventListener('input', function () {
         const nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$')
@@ -16,6 +16,7 @@ function validateName() {
         }
     });
 }
+
 function validateSalary() {
     const salary = document.querySelector("#salary");
     const output = document.querySelector('.salary-output');

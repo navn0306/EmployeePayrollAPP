@@ -1,22 +1,26 @@
 class EmployeePayrollData {
 
+    //getter and setter method
+    get id() {
+        return this._id;
+    }
+    set id(id) {
+        this._id = id;
+    }
+
     get name() {
         return this._name;
     }
-
     set name(name) {
-        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$');
-        if (nameRegex.test(name)) {
+        let nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$')
+        if (nameRegex.test(name))
             this._name = name;
-        } else {
-            throw 'Name is Incorrect';
-        }
+        else throw 'Name is Incorrect!';
     }
 
     get profilePic() {
         return this._profilePic;
     }
-
     set profilePic(profilePic) {
         this._profilePic = profilePic;
     }
@@ -24,7 +28,6 @@ class EmployeePayrollData {
     get gender() {
         return this._gender;
     }
-
     set gender(gender) {
         this._gender = gender;
     }
@@ -32,11 +35,9 @@ class EmployeePayrollData {
     get department() {
         return this._department;
     }
-
     set department(department) {
         this._department = department;
     }
-
     get salary() {
         return this._salary;
     }
@@ -44,35 +45,27 @@ class EmployeePayrollData {
         this._salary = salary;
     }
 
-    get notes() {
-        return this._notes;
+    get note() {
+        return this._note;
     }
-    set notes(notes) {
-        this._notes = notes;
+    set note(note) {
+        this._note = note;
     }
 
     get startDate() {
         return this._startDate;
     }
-    
     set startDate(startDate) {
-        let currentDate = new Date();
-        if (startDate > currentDate) {
-            throw "Start date not a future date";
-        }
-
-        var diff = Math.abs(currentDate.getTime - startDate.getTime());
-        if (diff / (1000 * 60 * 24) > 30) {
-            throw "start date is beyond 30 days";
-        }
         this._startDate = startDate;
     }
 
+    //tostring
     toString() {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        const empDate = !this.startDate ? "understand" : this.startDate.toLocaleDateString("en-US", options);
-
-        return "id =" + this.id + ", name='" + this.name + ", gender='" + this.gender + ", profilePic='" + this.profilePic + ", department=" + this.department + ", salary=" + this.salary + ", startDate=" + this.empDate + ", notes=" + this.notes;
+        const empDate = !this.startDate ? "undefined" :
+            this.startDate.toLocaleDateString("en-US", options);
+        return "id=" + this.id + ",name='" + this.name + ",gender='" + this.gender +
+            ",profilePic='" + this.profilePic + ",department=" + this.department +
+            ",salary=" + this.salary + ",startDate=" + empDate + ",note=" + this.note;
     }
-
 }
