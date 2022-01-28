@@ -38,3 +38,6 @@ Ability to set Event Listeners when Document and Validation for Name, Salary and
 
 UseCase 13-
 Ability to create Employee Payroll Object On Save.
+
+UseCase 14-
+Ability to save the Employee Payroll Object to Local Storage.

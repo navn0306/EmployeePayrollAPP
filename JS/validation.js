@@ -24,26 +24,45 @@ window.addEventListener('DOMContentLoaded', () => {
         output.textContent = salary.value;
     });
 
-    //Start Date Validation
-    const date = document.querySelector('#start Date');
-    const output1 = document.querySelector('text-error');
-    date.addEventListener('input', function () {
-        try {
-            (new EmployeePayrollData()).date = date.value;
-            textError.textContent = "";
-        } catch (e) {
-            textError.textContent = e;
-        }
-    });
+    const createEmployeePayroll = () => {
 
+        let employeePayrollData = new EmployeePayrollData();
+        try {
+            employeePayrollData.name = getInputValueById('#name');
+            setTextValue('.date-error', "");
+        } catch (e) {
+            setTextValue('.text-error', e);
+        }
+
+        try {
+            let date = new Date(day.value + "/" + month.value + "/" + year.value)
+            employeePayrollData.startDate = new Date(Date.parse(date));
+            setTextValue('.date-error', "");
+        } catch (e) {
+            setTextValue('.date-error', e);
+        }
+    }
     //save method
     const save = () => {
         try {
             let employeePayrollData = createEmployeePayroll();
+            createAndUpdateStorage(employeePayrollData);
         }
         catch (e) {
             return;
         }
+    }
+
+    function createAndUpdateStorage(employeePayrollData) {
+        let employeePayrollList = JSON.parse(localStorage.getItem("EmployeePayrollList"));
+
+        if (employeePayrollList != undefined) {
+            employeePayrollList.push(employeePayrollData);
+        } else {
+            employeePayrollList = [employeePayrollData]
+        }
+        alert(employeePayrollList.toString());
+        localStorage.setItem("EmployeePayrollList", JSON.stringify(employeePayrollList))
     }
 
     const createEmployeePayroll = () => {
