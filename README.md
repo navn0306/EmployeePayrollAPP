@@ -44,3 +44,6 @@ Ability to save the Employee Payroll Object to Local Storage.
 
 UseCase 15-
 Ability to reset the form on clicking reset.
+
+UseCase 16-
+Ability to create an Employee Payroll System Home Page UI.
