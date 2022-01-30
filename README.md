@@ -47,3 +47,6 @@ Ability to reset the form on clicking reset.
 
 UseCase 16-
 Ability to create an Employee Payroll System Home Page UI.
+
+UseCase 17-
+Ability to create a Header Section with Employee Details and Add Employee button.
